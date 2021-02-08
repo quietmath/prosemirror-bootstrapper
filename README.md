@@ -1,2 +1,3 @@
-# prosemirror-bootstrapper
-Extended setup for rich content editing with ProseMirror
+# ProseMirror Bootstrapper
+
+Extended setup for rich content editing with ProseMirror.

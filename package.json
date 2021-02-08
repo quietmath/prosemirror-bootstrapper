@@ -1,0 +1,78 @@
+{
+  "name": "prosemirror-bootstrapper",
+  "version": "0.1.0",
+  "description": "Extended setup for rich content editing with ProseMirror",
+  "main": "./dist/index",
+  "nyc": {
+    "all": true,
+    "check-coverage": true,
+    "lines": 0,
+    "statements": 0,
+    "functions": 0,
+    "branches": 0,
+    "exclude": [
+      "**/example/**/*.js",
+      "**/example/**/*.ts",
+      "**/*.d.ts",
+      "**/*.test.js"
+    ],
+    "reporter": [
+      "text",
+      "cobertura",
+      "html"
+    ],
+    "report-dir": "./.nyc_output/coverage"
+  },
+  "license": "MIT",
+  "contributors": [
+    "Michael Szul <michael@szul.us>"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/quietmath/prosemirror-bootstrapper.git"
+  },
+  "bugs": {
+    "url": "https://github.com/quietmath/prosemirror-bootstrapper/issues"
+  },
+  "homepage": "https://github.com/quietmath/prosemirror-bootstrapper#readme",
+  "scripts": {
+    "build": "tsc",
+    "build-demo": "tsc && browserify ./public/static/js/app.js --debug | exorcist ./public/static/js/gen/bundle.js.map > ./public/static/js/gen/bundle.js",
+    "test": "nyc mocha ./**/test/*.test.js --ignore ./**/node_modules/**",
+    "eslint": "eslint ./src/*.ts ./src/**/*.ts",
+    "eslint-fix": "eslint ./src/*.ts ./src/**/*.ts --fix"
+  },
+  "dependencies": {
+    "orderedmap": "^1.1.1",
+    "prosemirror-example-setup": "^1.1.2",
+    "prosemirror-image-plugin": "^1.1.0",
+    "prosemirror-keymap": "^1.1.4",
+    "prosemirror-model": "^1.13.3",
+    "prosemirror-schema-basic": "^1.1.2",
+    "prosemirror-schema-list": "^1.1.4",
+    "prosemirror-state": "^1.3.4",
+    "prosemirror-tables": "^1.1.1",
+    "prosemirror-view": "^1.17.5"
+  },
+  "devDependencies": {
+    "@types/mocha": "^8.2.0",
+    "@types/node": "^14.14.25",
+    "@types/orderedmap": "^1.0.0",
+    "@types/prosemirror-keymap": "^1.0.4",
+    "@types/prosemirror-model": "^1.11.2",
+    "@types/prosemirror-schema-basic": "^1.0.2",
+    "@types/prosemirror-schema-list": "^1.0.2",
+    "@types/prosemirror-state": "^1.2.6",
+    "@types/prosemirror-view": "^1.17.1",
+    "@typescript-eslint/eslint-plugin": "^4.14.2",
+    "@typescript-eslint/parser": "^4.14.2",
+    "eslint": "^7.19.0",
+    "exorcist": "^1.0.1",
+    "madge": "^4.0.0",
+    "mocha": "^8.2.1",
+    "nyc": "^15.1.0",
+    "rewire": "^5.0.0",
+    "ts-node": "^9.1.1",
+    "typescript": "^4.1.3"
+  }
+}
