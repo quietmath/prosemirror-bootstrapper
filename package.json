@@ -1,5 +1,5 @@
 {
-  "name": "prosemirror-bootstrapper",
+  "name": "@quietmath/prosemirror-bootstrapper",
   "version": "0.1.0",
   "description": "Extended setup for rich content editing with ProseMirror",
   "main": "./dist/index",
